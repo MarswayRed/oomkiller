@@ -1,0 +1,19 @@
+[Unit]
+Description=OOM Killer Service
+Documentation=https://github.com/marswayred/oomkiller
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/oomkiller-daemon
+Restart=on-failure
+RestartSec=5s
+OOMScoreAdjust=-1000
+StandardOutput=journal
+StandardError=journal
+Nice=-15
+MemoryLow=80M
+
+[Install]
+WantedBy=multi-user.target

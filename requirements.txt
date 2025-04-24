@@ -1,0 +1,3 @@
+psutil >= 5.8.0
+requests >= 2.20.0
+setuptools >= 45.0.0

@@ -1,0 +1,32 @@
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+
+# Log
+*.log
+*.log.*
+*.log.*.*
+*.log.*.*.*
+
+# 配置文件
+*.conf
+
+# Build 
+build/
+dist/
+*.egg-info/
+ReleaseFlow/RPMBUILD/SOURCES/
+ReleaseFlow/RPMBUILD/BUILD/
+ReleaseFlow/RPMBUILD/RPMS/
+ReleaseFlow/RPMBUILD/SRPMS/
+ReleaseFlow/RPMBUILD/BUILDROOT/
+
+# 临时文件
+*.tmp
+*.tmp.*
+*.tmp.*.*
+*.tmp.*.*.*
