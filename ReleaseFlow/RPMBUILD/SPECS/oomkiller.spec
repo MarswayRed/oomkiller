@@ -3,7 +3,7 @@
 
 Name:           %{srcname}
 Version:        1.0.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A guardian of memory space.
 
 License:        MIT
@@ -44,6 +44,8 @@ install -Dm 644 %{SOURCE2} %{buildroot}%{_unitdir}/%{srcname}.service
 
 %post
 %systemd_post %{srcname}.service
+systemctl start %{srcname}.service > /dev/null 2>&1 || :
+systemctl enable %{srcname}.service > /dev/null 2>&1 || :
 
 %preun
 %systemd_preun %{srcname}.service
